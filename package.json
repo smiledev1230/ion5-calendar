@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/temmo93/ion4-calendar-day-four-state.git"
+    "url": "https://github.com/web-mobile-developer/Ion4-calendar.git"
   },
   "devDependencies": {
     "@angular-devkit/core": "^7.1.3",
