@@ -25,14 +25,14 @@
 
 # Support
 
-- ionic-angular `^3.0.0`
+- @ionic/angular `^4.0.0`
 
 # Demo
 live demo [click me](https://hsuanxyz.github.io/demo/ion2-calendar/).
 
 # Usage
 ### Installation
-`$ npm install git+https://github.com/temmo93/ion4-calendar-day-four-state.git moment --save`
+`$ npm install git+https://github.com/web-mobile-developer/ion4-calendar.git moment --save`
 
 ### Import module
 
