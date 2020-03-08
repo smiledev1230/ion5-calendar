@@ -3,8 +3,9 @@
 [ ] **2.x**
 [ ] **3.x**
 [ ] **4.x**
+[ ] **5.x**
 
-**Ion2-calendar mode:**  (check one with "x")
+**Ion5-calendar mode:**  (check one with "x")
 [ ] components mode
 [ ] modal mode
 

@@ -1,6 +1,6 @@
 import { OnInit, EventEmitter, Provider } from '@angular/core';
 import { CalendarMonth, CalendarModalOptions, CalendarComponentOptions, CalendarDay, CalendarComponentPayloadTypes, CalendarComponentMonthChange, CalendarComponentTypeProperty } from '../calendar.model';
-import { CalendarService } from "../services/calendar.service";
+import { CalendarService } from '../services/calendar.service';
 import { ControlValueAccessor } from '@angular/forms';
 export declare const ION_CAL_VALUE_ACCESSOR: Provider;
 export declare class CalendarComponent implements ControlValueAccessor, OnInit {
@@ -17,15 +17,17 @@ export declare class CalendarComponent implements ControlValueAccessor, OnInit {
     format: string;
     type: CalendarComponentTypeProperty;
     readonly: boolean;
-    onChange: EventEmitter<CalendarComponentPayloadTypes>;
+    change: EventEmitter<CalendarComponentPayloadTypes>;
     monthChange: EventEmitter<CalendarComponentMonthChange>;
-    onSelect: EventEmitter<CalendarDay>;
-    onSelectStart: EventEmitter<CalendarDay>;
-    onSelectEnd: EventEmitter<CalendarDay>;
+    select: EventEmitter<CalendarDay>;
+    selectStart: EventEmitter<CalendarDay>;
+    selectEnd: EventEmitter<CalendarDay>;
     options: CalendarComponentOptions;
+    readonly MONTH_DATE_FORMAT = "MMMM yyyy";
     constructor(calSvc: CalendarService);
     ngOnInit(): void;
     getViewDate(): CalendarComponentPayloadTypes;
+    getDate(date: number): Date;
     setViewDate(value: CalendarComponentPayloadTypes): void;
     switchView(): void;
     prev(): void;
@@ -44,11 +46,11 @@ export declare class CalendarComponent implements ControlValueAccessor, OnInit {
     _payloadToTimeNumber(value: CalendarComponentPayloadTypes): number;
     _monthFormat(date: number): string;
     private initOpt;
-    private createMonth;
-    private _createCalendarDay;
-    private _handleType;
+    createMonth(date: number): CalendarMonth;
+    _createCalendarDay(value: CalendarComponentPayloadTypes): CalendarDay;
+    _handleType(value: number): CalendarComponentPayloadTypes;
     writeValue(obj: any): void;
     registerOnChange(fn: () => {}): void;
     registerOnTouched(fn: () => {}): void;
-    private _writeValue;
+    _writeValue(value: any): void;
 }

@@ -7,9 +7,9 @@ export declare class CalendarController {
     constructor(modalCtrl: ModalController, calSvc: CalendarService);
     /**
      * @deprecated
-     * @param calendarOptions
-     * @param modalOptions
-     * @returns
+     * @param {CalendarModalOptions} calendarOptions
+     * @param {ModalOptions} modalOptions
+     * @returns {any}
      */
     openCalendar(calendarOptions: CalendarModalOptions, modalOptions?: ModalOptions): Promise<{}>;
 }
